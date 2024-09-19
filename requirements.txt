@@ -11,3 +11,4 @@ python-docx
 PyMuPDF
 Pillow==10.0.0
 moviepy==1.0.3
+easyocr==1.7.1

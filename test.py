@@ -42,7 +42,10 @@ def login():
 
 @app.route('/logout')
 def logout():
-    session.pop('user_id', None)
+    # Remove user data upon logout
+    user_id = session.pop('user_id', None)
+    if user_id and user_id in user_data:
+        del user_data[user_id]
     return redirect(url_for('login'))
 
 # Route for home
